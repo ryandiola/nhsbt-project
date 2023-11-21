@@ -1,0 +1,481 @@
+@import url('https://fonts.googleapis.com/css2?family=Inclusive+Sans:ital@0;1&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inclusive Sans', Arial, Helvetica, sans-serif;
+}
+
+button {
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #fae100;
+}
+
+a:hover {
+    background-color: #fae100;
+}
+
+body img {
+    width: 100%;
+    height: 100%;
+}
+
+/* mobile design */
+/* header */
+header {
+    display: flex;
+    width: 100%;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+    background-color: white;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+}
+
+.logo {
+    display: flex;
+    padding: 1rem;
+    width: 100%;
+}
+
+header nav {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.mobilenav {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 100%;
+    z-index: 999;
+    background-color: white;
+    backdrop-filter: blur(10px);
+    box-shadow: -10px 0 10px rgba(255, 255, 255, 0.2);
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.closemenu {
+    margin-left: auto;
+    justify-content: center;
+    display: flex;
+}
+
+.closemenu a {
+    text-decoration: none;
+}
+
+.mobilenav li {
+    width: 100%;
+    list-style: none;
+}
+
+.mobilenav li a {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    color: #3f525f;
+}
+
+.searchbtn {
+    display: flex;
+    align-items: center;
+    background-color: #005bbb;
+    border-radius: 50%;
+    padding: 0.25rem;
+    border-width: 0;
+    color: white;
+    margin: 0.5rem;
+}
+
+.searchbtn span {
+    display: none;
+}
+
+.menubtn {
+    display: flex;
+    align-items: center;
+    background-color: #005bbb;
+    border-radius: 25rem;
+    padding: 0.25rem 0.75rem;
+    border-width: 0;
+    color: white;
+    margin-right: 1rem;
+}
+
+/* body */
+body {
+    background-color: white;
+    position: relative;
+    top: 6rem;
+}
+
+.heading1 {
+    font-size: 2.25rem;
+    font-weight: bold;
+    color: #231f20;
+    display: inline-flex;
+    margin: 2rem 2rem 1rem;
+}
+
+.heading2 {
+    font-size: 1.88rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    color: #231f20;
+    margin-top: 3rem;
+}
+
+.heading3 {
+    font-size: 1.125rem;
+    color: #231f20;
+    font-weight: bold;
+}
+
+.subheading2 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #231f20;
+    margin-bottom: 0.75rem;
+}
+
+.content1 {
+    color: #3f525f;
+    margin: 0 2rem 2rem;
+    line-height: 1.25rem;
+}
+
+.content2 {
+    font-size: 0.88rem;
+    color: #3f525f;
+    margin-bottom: 1rem;
+    text-align: center;
+    line-height: 1rem;
+}
+
+.mainbtn {
+    display: flex;
+    justify-content: center;
+}
+
+.colourbar {
+    display: grid;
+    grid-template-columns: 50% 16.67% 16.67% 16.67%;
+    height: 2rem;
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+/* hero section */
+.herosctn {
+    background-color: #E5F0FA;
+}
+
+.herosctn h1 {
+    font-size: 2.25rem;
+    margin: 2rem 1rem;
+    color: #231f20;
+    line-height: 2.25rem;
+    text-align: start;
+
+}
+
+.herosctn p {
+    font-size: 1.0rem;
+    margin: 0rem 1rem 2rem;
+    color: #3f525f;
+    line-height: 1.25rem;
+}
+
+.herosctn button {
+    display: flex;
+    padding: 0.75rem 7.5rem;
+    border-radius: 2rem;
+    border-width: 0;
+    background-color: #005bbb;
+    color: white;
+    margin: 1.5rem;
+    font-size: 0.88rem;
+    font-weight: bold;
+}
+
+/* about section  */
+.aboutsctn {
+    margin: 1rem;
+    background-color: #E5F0FA;
+}
+
+.aboutimg {
+    height: 14.4rem;
+    border-top-right-radius: 0.5rem;
+    border-top-left-radius: 0.5rem;
+    background-image: url(/image/aboutimg.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.aboutsctn button {
+    display: flex;
+    padding: 0.75rem 2.5rem;
+    border-radius: 2rem;
+    border-width: 0;
+    background-color: #005bbb;
+    color: white;
+    font-size: 0.88rem;
+    font-weight: bold;
+    margin-bottom: 4rem;
+}
+
+/* facts section */
+.factsctn {
+    margin: 1rem;
+}
+
+.factsctn div {
+    margin-bottom: 1.5rem;
+}
+
+.factsctn span {
+    display: flex;
+    justify-content: center;
+}
+
+.factsctn span a {
+    color: #005bbb;
+    text-underline-offset: 0.30rem;
+    font-size: 0.875rem;
+}
+
+.bloodimg {
+    display: block;
+    background-image: url(/image/organ\ and\ tissues.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 15rem;
+    width: 100%;
+}
+
+.organimg {
+    background-image: url(/image/organ\ and\ tissues.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 15rem;
+    width: 100%;
+}
+
+.stemcellimg {
+    background-image: url(/image/stemcell.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 15rem;
+    width: 100%;
+}
+
+.nhs70img {
+    background-image: url(/image/nhs70.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 15rem;
+    width: 100%;
+}
+
+/* services section  */
+.servicessctn {
+    margin: 0 1rem 2rem;
+
+}
+
+.servicessctn img {
+    border-radius: 0.5rem;
+}
+
+.servicessctn span {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2.5rem;
+}
+
+.servicessctn span a {
+    color: #005bbb;
+    text-align: center;
+    margin: 1rem 2rem 2rem;
+    text-underline-offset: 0.30rem;
+    font-weight: 600;
+}
+
+.servicesimg {
+    height: 11.75rem;
+}
+
+.servicessctn button {
+    display: flex;
+    padding: 0.75rem 5rem;
+    border-radius: 2rem;
+    border-width: 0;
+    background-color: #005bbb;
+    color: white;
+    font-size: 0.88rem;
+    font-weight: bold;
+    margin-bottom: 4rem;
+}
+
+.servicessctn .colourbar {}
+
+/* featured section  */
+
+.featuredsctn {
+    margin: 1rem;
+    background-color: #F6F8F8;
+    padding-bottom: 2rem;
+    border-radius: 0.5rem;
+}
+
+.featured {
+    height: 14.35rem;
+}
+
+.featured img {
+    border-top-right-radius: 0.5rem;
+    border-top-left-radius: 0.5rem
+}
+
+/* news section */
+.newsheading {
+    display: flex;
+    justify-content: center;
+}
+
+article {
+    margin: 2rem 1rem;
+    padding-bottom: 1rem;
+    border-radius: 0.5rem;
+    background-color: #EDE9E6;
+}
+
+article img {
+    border-top-right-radius: 0.5rem;
+    border-top-left-radius: 0.5rem;
+}
+
+figure {
+    height: 11.75rem;
+}
+
+figcaption {
+    margin: 2rem;
+}
+
+article p {
+    margin: 0 2rem 2rem;
+    font-size: 0.88rem;
+    color: #3f525f;
+    margin-bottom: 1rem;
+    line-height: 1rem;
+}
+
+.newssctn a {
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #231f20;
+    font-size: 0.85rem;
+}
+
+.newsdate {
+    display: flex;
+    justify-content: end;
+    font-style: italic;
+    font-size: 0.75rem;
+    margin: -2rem 1rem 1rem;
+}
+
+.morenews {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    font-size: 1rem;
+    margin: 0 1rem;
+}
+
+.newssctn button {
+    display: flex;
+    border: 0.15rem solid black;
+    padding: 0.75rem 5rem;
+    border-radius: 2rem;
+    background-color: white;
+    color: #005bbb;
+    border-color: #005bbb;
+    font-size: 0.88rem;
+    font-weight: bold;
+    margin-bottom: 4rem;
+    cursor: pointer;
+}
+
+.newssctn button:hover {
+    background: #005bbb;
+    color: white;
+}
+
+/* footer */
+footer {
+    background-color: #F6F8F8;
+    color: #3f525f;
+}
+
+footer h2 {
+    font-size: 1.25rem;
+    padding: 1rem;
+}
+
+footer p {
+    font-size: 0.5rem;
+}
+
+footer a {
+    height: 100%;
+    font-size: 0.75rem;
+    padding: 0.5rem;
+    color: #3f525f;
+}
+
+@media (min-width: 800px) {
+
+    header nav ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        list-style: none;
+        width: 100%;
+    }
+
+    header nav ul li {
+        height: 50px;
+    }
+
+    header nav li a {
+        height: 100%;
+        text-decoration: none;
+        padding: 0 30px;
+        display: flex;
+        align-items: center;
+        color: #3f525f;
+    }
+
+
+}
