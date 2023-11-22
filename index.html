@@ -7,7 +7,10 @@
     <meta name="title" content="Home | NHS Blood and Transplant">
     <meta name="description"
         content="We specialise in managing blood, plasma, and platelet donation, along with organ, stem cell, and tissue donation and transplantation. Our mission is dedicated to saving and enhancing lives through comprehensive donation and transplantation services.">
+    <meta name="keyword"
+        content="NHSBT, NHS Blood and Transplant, Blood donation, Whole Blood, Blood, Organ, Stem Cell, Donate">
     <title>Home | NHS Blood and Transplant </title>
+    <link rel="icon" type="image/x-icon" href="image/nhsbt-logo.svg">
     <link rel="stylesheet" href="styles.css">
 </head>
 
@@ -15,16 +18,17 @@
     <!-- navbar -->
     <header>
         <div class="logo">
-            <a href="#"><img src="/image/nhsbt-logo.svg" height="35rem" alt="NHSBT Logo"></a>
+            <a href="#"><img src="image/nhsbt-logo.svg" alt="NHSBT Logo"></a>
         </div>
-        <nav class>
+        <nav>
             <!-- mobile navbar -->
             <ul class="mobilenav">
-                <span class="closemenu"><a onclick=hideMenu() href="#">Close menu<svg xmlns="http://www.w3.org/2000/svg"
-                            height="24" viewBox="0 -960 960 960" width="24">
-                            <path
-                                d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
-                        </svg></a></span>
+                <a class="closemenu" onclick=hideMenu() href="#">Close menu<svg xmlns="http://www.w3.org/2000/svg"
+                        height="24" viewBox="0 -960 960 960" width="24">
+                        <path
+                            d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+                    </svg></a>
+
                 <li><a href="Services.html">Services</a></li>
                 <li><a href="Research.html">Research</a></li>
                 <li><a href="Get-Involed.html">Contribute</a></li>
@@ -45,15 +49,27 @@
                 </svg>
             </button>
         </nav>
+
+        <!-- laptop desktop navbar -->
+        <!-- <nav>
+            <ul class="desktopnav">
+                <li><a href="Services.html">Services</a></li>
+                <li><a href="Research.html">Research</a></li>
+                <li><a href="Get-Involed.html">Contribute</a></li>
+                <li><a href="Careers.html">Careers</a></li>
+                <li><a href="About.html">About</a></li>
+                <li><a href="News.html">News</a></li>
+            </ul>
+        </nav> -->
     </header>
     <main>
         <!-- hero section -->
         <section class="herosctn">
             <div>
-                <img src="image/heroimg2.jpg" alt="All types can save lives - Diversed group of people donating blood.">
+                <img src="image/heroimg.png" alt="All types can save lives - Diversed group of people donating blood.">
             </div>
             <h1>
-                Save and enhance lives
+                Save and enhance the lives of others
             </h1>
             <p>
                 We help individuals accomplish something truly remarkable:
@@ -78,9 +94,7 @@
                 Dedicated to preserving life
             </span>
             <p class="content1">
-                We process and safely deliver nearly
-                2 million donations annually, from donation
-                to transfusion or transplant. Our ongoing commitment is to enhance service efficiency,
+                Our ongoing commitment is to enhance service efficiency,
                 accessibility for patients and donors, and collaborate with the NHS to reduce hospital costs.
             </p>
             <div class="mainbtn">
@@ -181,9 +195,14 @@
         <section class="servicessctn">
             <span class="heading2">Our Services</span>
             <div>
+
                 <div class="servicesimg">
-                    <img src="image/blood services.jpg"
-                        alt="A pack of blood and three test tubes containing some blood. ">
+                    <picture>
+                        <source media="(min-width: 1024px)" srcset="image/blood services.jpg">
+                        <source media="(min-width: 768px)" srcset="image/tabletbloodservices.jpg">
+                        <img src="image/mobileservicesimg.jpg"
+                            alt="A pack of blood and three test tubes containing some blood. ">
+                    </picture>
                 </div>
                 <span class="heading3">
                     <a href="">
@@ -238,7 +257,12 @@
         <section class="featuredsctn">
             <div class="featured">
                 <!-- this should be a video image is a placeholder -->
-                <img src="\image\manufacturingvideo.png" alt="video of filton manufacturing lab">
+                <iframe width="100%" height="100%"
+                    src="https://www.youtube-nocookie.com/embed/fS42C1GOyvM?si=p7s6PWa7Ex1UVyIn"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen>
+                </iframe>
             </div>
             <span class="heading1">
                 Beyond Giving: The journey of your donation
@@ -257,7 +281,12 @@
             </div>
             <article>
                 <figure>
-                    <img src="image/news1.jpg" alt="Ethnic family">
+                    <picture>
+                        <source media="(min-width: 1024px)" srcset="image/news1.jpg">
+                        <source media="(min-width: 460px)" srcset="image/tabletnews1.jpg">
+                        <img src="image/mobilenews1.jpg"
+                            alt="A pack of blood and three test tubes containing some blood. ">
+                    </picture>
                 </figure>
                 <figcaption class="heading3">
                     Increased proportion of people from ethnic minority backgrounds show their support for organ
@@ -353,77 +382,100 @@
                 <button>View all News</button>
             </div>
         </section>
-        <!-- Another section possibly about research and patient stories -->
-        <section>
-            <span class="heading3">Lorem Ipsum</span>
-            <div>
-                <img src="" alt="icon placeholder">
-                <span>Lorem ipsum</span>
+        <!-- Performance and Strategy Section -->
+        <section class="pnssctn">
+            <span class="heading2">Performance and Strategy</span>
+            <div class="priorities div1">
+                <div class="pnsimgdiv">
+                    <img src="image/planning.png" alt="decorative">
+                </div>
+                <span>Our Priorities</span>
                 <p>
-                    Lorem ipsum dolor sit amet consectetur
-                    adipisicing elit. Quas, optio?
+                    To deliver on our ambition of saving and improving even more lives,
+                    we have developed five strategic priorities
                 </p>
-                <button>button</button>
+                <div class="mainbtn">
+                    <button>Our Strategy</button>
+                </div>
             </div>
-            <div>
-                <img src="" alt="icon placeholder">
-                <span class="heading3">Lorem ipsum</span>
+            <div class="patient div1">
+                <div class="pnsimgdiv">
+                    <img src="image/story2.png" alt="icon placeholder">
+                </div>
+                <span>Patient and donor stories</span>
                 <p>
-                    Lorem ipsum dolor sit amet consectetur
-                    adipisicing elit. Quas, optio?
+                    Amazing real stories from those affected by donation and transplantation
                 </p>
-                <button>button</button>
+                <div class="mainbtn">
+                    <button>Share your story</button>
+                </div>
             </div>
         </section>
     </main>
     <footer>
-        <h2>About NHS Blood and Transplant</h2>
-        <ul>
-            <li><a href="">About us</a></li>
-            <li><a href="">Annual report and accounts</a></li>
-            <li><a href="">Modern Slavery Act Statement</a></li>
-        </ul>
-        <h2>Legal</h2>
-        <ul>
-            <li><a href="">Privacy and cookies</a></li>
-            <li><a href="">Terms and conditions</a></li>
-            <li><a href="">Looking after your data</a></li>
-            <li><a href="">Freedom of information</a></li>
-            <li><a href="">Accessibility</a></li>
-            <li><a href="">Change cookie settings</a></li>
-            <li><a href="">Copyright &copy; NHS Blood and Transplant</a></li>
-        </ul>
-        <h2>Get in Touch</h2>
-        <ul>
-            <li><a href="">Contact us</a></li>
-            <li><a href="">Press office</a></li>
-            <li><a href="">Careers</a></li>
-            <li><a href="">Tell us what you think of our website</a></li>
-            <li><a href="">RSS feeds</a></li>
-        </ul>
-        <h2>Follow us on social media</h2>
-        <ul>
-            <li>
-                <a href="">
-                    <img src="" alt="twitter logo">Twitter
-                </a>
-            </li>
-            <li>
-                <a href="">
-                    <img src="" alt="Facebook logo">Facebook
-                </a>
-            </li>
-            <li>
-                <a href="">
-                    <img src="" alt="LinkedIn logo">LinkedIn
-                </a>
-            </li>
-            <li>
-                <a href="">
-                    <img src="" alt="Youtube logo">Youtube
-                </a>
-            </li>
-        </ul>
+        <div>
+            <h2>About NHS Blood and Transplant</h2>
+
+            <ul>
+                <li><a href="">About us</a></li>
+                <li><a href="">Annual report and accounts</a></li>
+                <li><a href="">Modern Slavery Act Statement</a></li>
+            </ul>
+        </div>
+        <div>
+            <h2>Legal</h2>
+
+            <ul>
+                <li><a href="">Privacy and cookies</a></li>
+                <li><a href="">Terms and conditions</a></li>
+                <li><a href="">Looking after your data</a></li>
+                <li><a href="">Freedom of information</a></li>
+                <li><a href="">Accessibility</a></li>
+                <li><a href="">Change cookie settings</a></li>
+                <li><a href="">Copyright &copy; NHS Blood and Transplant</a></li>
+            </ul>
+        </div>
+        <div>
+            <h2>Get in Touch</h2>
+
+            <ul>
+                <li><a href="">Contact us</a></li>
+                <li><a href="">Press office</a></li>
+                <li><a href="">Careers</a></li>
+                <li><a href="">Tell us what you think of our website</a></li>
+                <li><a href="">RSS feeds</a></li>
+            </ul>
+        </div>
+        <div>
+            <h2>Follow us on social media</h2>
+
+            <ul>
+                <li>
+                    <span><img src="image/logo-twitter.svg" alt="twitter logo"></span>
+                    <a href="">
+                        Twitter
+                    </a>
+                </li>
+                <li>
+                    <span> <img src="image/logo-facebook.svg" alt="Facebook logo"></span>
+                    <a href="">
+                        Facebook
+                    </a>
+                </li>
+                <li>
+                    <span><img src="image/logo-linkedin.svg" alt="LinkedIn logo"></span>
+                    <a href="">
+                        LinkedIn
+                    </a>
+                </li>
+                <li>
+                    <span> <img src="image/logo-youtube.svg" alt="Youtube logo"></span>
+                    <a href="">
+                        Youtube
+                    </a>
+                </li>
+            </ul>
+        </div>
     </footer>
 
     <script>
